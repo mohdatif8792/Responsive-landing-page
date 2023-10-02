@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">Your Logo</div>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="menu-toggle">&#9776;</div>
+      </nav>
+    </header>
+    
+    <div class="card-container">
+      <div class="card">
+        <img src="/Responsive Card/Nature5.jpg" alt="" />
+        <div class="card-content">
+          <h2>Flowers</h2>
+          <p>
+            Flowers are nature's most exquisite creations, a symphony of colors,
+            shapes, and fragrances that have captured the human imagination for
+            centuries. These delicate wonders of the plant world serve both
+            aesthetic and biological functions, attracting pollinators and
+            delighting our senses.
+          </p>
+          <a href="" class="btn">Read More</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="/Responsive Card/Nature4.jpg" alt="" />
+        <div class="card-content">
+          <h2>Forest</h2>
+          <p>
+            Forests are enchanting and complex ecosystems that cover vast
+            expanses of our planet. They are characterized by an abundance of
+            trees, diverse plant life, and a wide array of animal species. These
+            natural wonders provide numerous ecological, economic, and social
+            benefits
+          </p>
+          <a href="" class="btn">Read More</a>
+        </div>
+      </div>
+      <!-- <div class="card">
+        <img src="/Responsive Card/Nature7.jpg" alt="" />
+        <div class="card-content">
+          <h2>Nature</h2>
+          <p>
+            Nature is a boundless source of wonder, providing us with
+            breathtaking landscapes, diverse ecosystems, and an abundance of
+            life. It encompasses everything from the smallest microorganisms to
+            the grandeur of mountains and oceans.
+          </p>
+          <a href="" class="btn">Read More</a>
+        </div>
+      </div> -->
+      <div class="card">
+        <img src="/Responsive Card/Nature9.jpg" alt="" />
+        <div class="card-content">
+          <h2>Nature</h2>
+          <p>
+            Animals are an integral part of our world, enriching our lives with
+            their presence and contributing to the health and stability of
+            ecosystems. Understanding and appreciating the animal kingdom is not
+            only a source of wonder but also a responsibility to ensure the
+            well-being of all species.
+          </p>
+          <a href="" class="btn">Read More</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add a container for the slideshow -->
+  
+<div class="slideshow-container">
+  <div class="mySlides">
+    <img src="Nature6.jpg" alt="Slide 1" />
+  </div>
+
+  <div class="mySlides">
+    <img src="Nature4.jpg" alt="Slide 2" />
+  </div>
+
+  <div class="mySlides">
+    <img src="Nature8.jpg" alt="Slide 3" />
+  </div>
+
+  <!-- Add more slides as needed -->
+
+  <!-- Navigation dots -->
+  <div class="dot-container">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <!-- Add more dots for additional slides -->
+  </div>
+</div>
+
+
+    <footer>
+        <p>&copy; 2023 Your Company</p>
+    </footer>
+    <script>
+      let slideIndex = 0;
+      showSlides();
+    
+      function showSlides() {
+        let i;
+        const slides = document.getElementsByClassName("mySlides");
+        const dots = document.getElementsByClassName("dot");
+    
+        // Hide all slides
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+    
+        // Remove active class from all dots
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+    
+        // Display the current slide and set the corresponding dot as active
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+    
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    
+        // Change slide every 2 seconds (2000 milliseconds)
+        setTimeout(showSlides, 2000);
+      }
+    </script>
+  </body>
+</html>
